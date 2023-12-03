@@ -4,16 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bootstrap超入門</title>
+    <title>水道・リフォーム会社</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style type="text/css">
+       .wazatocontainer {
+        position: relative;
+        width: 200px;
+        border: 2px solid gray;
+        padding: 20px;
+        margin: 20px;
+        overflow: visible; /* 必要に応じて追加 */
+        border-radius: 0.2rem;
+        }
+
+        .wazatooverflow {
+            position: absolute;
+            margin: 10px;
+            top: 0;          /* 上端を親要素の上端に合わせる */
+            right: -50px;   /* 右に100pxはみ出す */
+        }
+    </style>
 </head>
 <body>
 <!-- NAV -->
 <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
     <div class="container">
-        <a class="navbar-brand" href="#"><img src="./logo.png" height="30"></a>
+        <a class="navbar-brand" href="#"><img src="./jaguchi.png" height="30"><span>水道・リフォーム会社</span></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -23,11 +43,11 @@
                 <li class="nav-item"><a class="nav-link" aria-current="page" href="#hero">ホーム</a></li>
                 <li class="nav-item"><a class="nav-link" href="#feature">特徴</a></li>
                 <li class="nav-item"><a class="nav-link" href="#showcases">詳細</a></li>
-                <li class="nav-item"><a class="nav-link" href="#price">プラン</a></li>
+                <li class="nav-item"><a class="nav-link" href="#price">料金</a></li>
                 <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
-                <li class="nav-item"><a class="nav-link" href="#team">メンバー</a></li>
+                <li class="nav-item"><a class="nav-link" href="#team">お客様の声</a></li>
             </ul>
-            <a class="btn btn-dark btn-sm text-white" href="#">無料で始める</a>
+            <a class="btn btn-dark btn-sm text-white" href="https://docs.google.com/forms/d/16ypVZIs_JvHzWkbkOikuHuBQa34jT-rIgb4-l8hyFkk/edit">お問い合わせ</a>
         </div>
     </div>
 </nav>
@@ -40,9 +60,9 @@
                     class="img-fluid">
             </div>
             <div class="col-lg-6 text-white">
-                <p class="badge bg-warning mb-1">HTMLだけでコーディング</p>
-                <h1>Bootstrap超入門</h1>
-                <p class="lead">Webプログラミング初心者がこのページを作れるようになる！</p>
+                <p class="badge bg-warning mb-1">指定店</p>
+                <h1>水道・リフォーム会社</h1>
+                <p class="lead">水道工事、リフォーム工事対応します。指定店のため安心してご依頼できます。</p>
             </div>
         </div>
     </div>
@@ -52,19 +72,19 @@
     <div class="container overflow-hidden">
         <div class="row text-center">
             <div class="col-md-4 mb-3">
-                <div class="fs-1"><i class="bi bi-film text-info"></i></div>
-                <h5>物語りがある</h5>
-                <p class="text-secondary">「実用的に使える」または「新しい体験ができる」をテーマに、必要最小限の技術を使ってストーリーを展開し伏線を回収するコンテンツです。</p>
+                <div class="fs-1"><i class="fas fa-bath text-info"></i></div>
+                <h5>水回りリフォーム</h5>
+                <p class="text-secondary"></p>
             </div>
             <div class="col-md-4 mb-3">
-                <div class="fs-1"><i class="bi bi-tools text-info"></i></div>
-                <h5>新しいものづくり</h5>
-                <p class="text-secondary">「ハードウェアだけでなく、プログラミングやデータサイエンスも１つのツールとして活用する「新しい時代のものづくり」です。</p>
+                <div class="fs-1"><i class="fas fa-faucet text-info"></i></div>
+                <h5>水道引き込み工事</h5>
+                <p class="text-secondary"></p>
             </div>
             <div class="col-md-4 mb-3">
-                <div class="fs-1"><i class="bi bi-award text-info"></i></div>
-                <h5>モノにする</h5>
-                <p class="text-secondary">技術要素をステップバイステップで学びながら、演習で試行錯誤を行い、自ら考え成果物を作り上げるスタイルです。</p>
+                <div class="fs-1"><i class="fas fa-fire-extinguisher text-info"></i></div>
+                <h5>防火設備</h5>
+                <p class="text-secondary"></p>
             </div>
         </div>
     </div>
@@ -75,35 +95,34 @@
         <div class="row mb-5 align-items-center">
             <div class="col-lg-6 order-lg-1">
                 <img class="img-fluid"
-                    src="https://doodleipsum.com/700x394/hand-drawn?i=0e05d2d124e0a86b24727ce6006b739a">
+                    src="./230902001-1280x1280.jpeg">
             </div>
             <div class="col-lg-6 order-lg-2">
                 <span class="display-3 text-info">01</span>
-                <h3>物語りのあるコンテンツ</h3>
-                <p>網羅的な説明が書かれたコンテンツではなく、映画のようにこころを動かすコンテンツを目指しています。シナリオ作りから検証を重ねて作成しています。</p>
+                <h3>施工イメージ：台所</h3>
+                <p>お客様のニーズに合わせて、台所のリフォームを提供。価格重視の方には予算内で質の高いリノベーションを、機能重視の方には最新テクノロジーと使いやすさを備えたキッチンをご提供します。あなたの理想の台所を実現しましょう。</p>
             </div>
         </div>
         <div class="row mb-5 align-items-center">
             <div class="col-lg-6 order-lg-2">
                 <img class="img-fluid"
-                    src="https://doodleipsum.com/700x394/hand-drawn?i=4a51d1ffc4e6797c11a5b4c7cc33cda6">
+                    src="./230508201-1280x1280.jpeg">
             </div>
             <div class="col-lg-6 order-lg-1">
                 <span class="display-3 text-info">02</span>
-                <h3>新しい時代のものづくり</h3>
-                <p>数十年の間に「ものづくり製品」から「ウェブサービス」へ時代が一変しましたが、更に時代は変化し続けます。画面の中だけの世界ではなく、リアルな世界に作用するものにこだわっています。</p>
+                <h3>施工イメージ：トイレ</h3>
+                <p>自由な選択で、夢のトイレリフォームを実現。お好きなメーカーの製品を選び、おしゃれで快適なトイレ空間を手に入れましょう。あなたのスタイルに合わせたデザインと機能を提供します。</p>
             </div>
         </div>
         <div class="row mb-5 align-items-center">
             <div class="col-lg-6 order-lg-1">
                 <img class="img-fluid"
-                    src="https://doodleipsum.com/700x394/hand-drawn?i=0293217a2126d91159f5a6717396cbe4">
+                    src="./636206_s.jpg">
             </div>
             <div class="col-lg-6 order-lg-2">
                 <span class="display-3 text-info">03</span>
-                <h3>ステップバイステップでモノにする</h3>
-                <p>「ものものテック」では創業以来、毎年多数のリアルなハンズオンを企業・自治体・大学・各種イベント等で実施しています。リアルな教育でのエッセンスや最適化された難易度で皆さんの学びを加速します。
-                </p>
+                <h3>施工イメージ：防火設備</h3>
+                <p>法令順守を第一に、防火設備の工事を丁寧に施工。安全と信頼性を最優先に、防火設備を整備し、貴重な資産や人命を守ります。専門知識と経験を活かし、最高水準の防火対策を提供します。</p>
             </div>
         </div>
     </div>
@@ -113,9 +132,9 @@
     <div class="container overflow-hidden">
         <div class="row text-center">
             <div class="col">
-                <h3 class="py-5">あなたの物語を実現しよう！</h3>
-                <p class="lead">ほぼCSSやJavaScriptは記述せずに、HTMLのコーディングだけでランディングページを作れます。</p>
-                <p class="lead py-3"><a href="#" class="btn btn-lg btn-outline-light">学習を始める</a></p>
+                <h3 class="py-5">あなたの家の水回りを自由に改造しよう！</h3>
+                <p class="lead">家庭用トイレ・水回りのリフォームにおいて、一流メーカーの最高品質のトイレを提供します。快適さ、耐久性、エレガンスを兼ね備えた新しいトイレで、お住まいをより快適な空間へと変えましょう。</p>
+                <p class="lead py-3"><a href="https://docs.google.com/forms/d/16ypVZIs_JvHzWkbkOikuHuBQa34jT-rIgb4-l8hyFkk/edit" class="btn btn-lg btn-outline-light">お問い合わせ</a></p>
             </div>
         </div>
     </div>
@@ -124,61 +143,62 @@
 <section class="bg-light py-5" id="price">
     <div class="container overflow-hidden">
         <div class="row text-center">
-            <h3 class="mb-4">プランを比較</h3>
+            <h3 class="mb-4">施工費用の例</h3>
         </div>
         <div class="row row-cols-1 row-cols-md-3">
             <div class="col">
                 <div class="card mb-4 shadow-sm">
                     <div class="card-header p-3">
-                        <h4 class="my-0 fw-normal">お試しプラン</h4>
+                        <h4 class="my-0 fw-normal">台所リフォーム
+                        </h4>
                     </div>
                     <div class="card-body">
-                        <h1 class="card-title fs-1"><span class="h4">¥</span>0<span class="h4 text-secondary fw-light">
-                                /月</span></h1>
+                        <h1 class="card-title fs-1"><span class="h4">¥</span>100,000～<span class="h4 text-secondary fw-light">
+                                /件</span></h1>
                         <ul class="list-unstyled mt-3 mb-4">
-                            <li><i class="bi-check-lg text-success"></i>概要の把握と体験</li>
-                            <li class="text-secondary text-decoration-line-through">全ての学習コンテンツ閲覧</li>
-                            <li class="text-secondary text-decoration-line-through">講師による講義</li>
-                            <li class="text-secondary text-decoration-line-through">メンターによるサポート</li>
+                            <li><i class="bi-check-lg text-success"></i>安心修理・工事</li>
+                            <li><i class="bi-check-lg text-success"></i>アフターフォロー</li>
+                            <li><i class="bi-check-lg text-success"></i>一流メーカー品</li>
                         </ul>
-                        <button type="button" class="w-100 btn btn-lg btn-outline-info">すぐに試す</button>
+                        <!-- <button type="button" class="w-100 btn btn-lg btn-outline-info">すぐに依頼する</button> -->
+                        <a href="https://docs.google.com/forms/d/16ypVZIs_JvHzWkbkOikuHuBQa34jT-rIgb4-l8hyFkk/viewform?edit_requested=true" class="w-100 btn btn-lg btn-outline-info">お問い合わせ</a>
                     </div>
                 </div>
             </div>
             <div class="col">
                 <div class="card mb-4 shadow-sm border-info">
                     <div class="card-header py-3 border-info bg-info text-white">
-                        <h4 class="my-0 fw-normal">個人プラン</h4>
+                        <h4 class="my-0 fw-normal">トイレリフォーム</h4>
                     </div>
                     <div class="card-body">
-                        <h1 class="card-title fs-1"><span class="h4">¥</span>0<span class="h4 text-secondary fw-light">
-                                /月（今だけ特別！）</span></h1>
+                        <h1 class="card-title fs-1"><span class="h4">¥</span>5,000～<span class="h4 text-secondary fw-light">
+                                /件（今だけ特別！）</span></h1>
                         <ul class="list-unstyled mt-3 mb-4">
-                            <li><i class="bi-check-lg text-success"></i>概要の把握と体験</li>
-                            <li><i class="bi-check-lg text-success"></i>全ての学習コンテンツ閲覧</li>
-                            <li class="text-secondary text-decoration-line-through">講師による講義</li>
-                            <li class="text-secondary text-decoration-line-through">メンターによるサポート</li>
+                            <li><i class="bi-check-lg text-success"></i>安心修理・工事</li>
+                            <li><i class="bi-check-lg text-success"></i>アフターフォロー</li>
+                            <li><i class="bi-check-lg text-success"></i>一流メーカー品</li>
                         </ul>
-                        <button type="button" class="w-100 btn btn-lg btn-info text-white">登録・ログイン</button>
+                        <!-- <button type="button" class="w-100 btn btn-lg btn-info text-white">すぐに依頼する</button> -->
+                        <a href="https://docs.google.com/forms/d/16ypVZIs_JvHzWkbkOikuHuBQa34jT-rIgb4-l8hyFkk/viewform?edit_requested=true" class="w-100 btn btn-lg btn-info text-white">お問い合わせ</a>
                     </div>
                 </div>
             </div>
             <div class="col">
                 <div class="card mb-4 shadow-sm">
                     <div class="card-header py-3">
-                        <h4 class="my-0 fw-normal">法人プラン</h4>
+                        <h4 class="my-0 fw-normal">火災報知器の点検/消火器の点検</h4>
                     </div>
                     <div class="card-body">
-                        <h1 class="card-title fs-1"><span class="h4">¥</span>50,000〜<span
-                                class="h4 text-secondary fw-light"> /月</span>
+                        <h1 class="card-title fs-1"><span class="h4">¥</span>10,000〜<span
+                                class="h4 text-secondary fw-light"> /台</span>
                         </h1>
                         <ul class="list-unstyled mt-3 mb-4">
-                            <li><i class="bi-check-lg text-success"></i>概要の把握と体験</li>
-                            <li><i class="bi-check-lg text-success"></i>全ての学習コンテンツ閲覧</li>
-                            <li><i class="bi-check-lg text-success"></i>講師による講義</li>
-                            <li><i class="bi-check-lg text-success"></i>メンターによるサポート</li>
+                            <li><i class="bi-check-lg text-success"></i>安心修理・工事</li>
+                            <li><i class="bi-check-lg text-success"></i>アフターフォロー</li>
+                            <li><i class="bi-check-lg text-success"></i>一流メーカー品</li>
                         </ul>
-                        <button type="button" class="w-100 btn btn-lg btn-outline-info">ご相談ください</button>
+                        <!-- <button type="button" class="w-100 btn btn-lg btn-outline-info">ご相談ください</button> -->
+                        <a href="https://docs.google.com/forms/d/16ypVZIs_JvHzWkbkOikuHuBQa34jT-rIgb4-l8hyFkk/viewform?edit_requested=true" class="w-100 btn btn-lg btn-outline-info">お問い合わせ</a>
                     </div>
                 </div>
             </div>
@@ -194,7 +214,7 @@
         <div class="row align-items-center">
             <div class="col-lg-5 mb-3">
                 <img class="img-fluid"
-                    src="https://doodleipsum.com/700x394/flat?i=bcfd79692eeea887b9f20887c5a3a401">
+                    src="https://doodleipsum.com/700/abstract?i=533d71e7733d1ad05ecdc25051eed663">
             </div>
             <div class="col-lg-7">
                 <div class="accordion" id="accordionFAQ">
@@ -202,13 +222,13 @@
                         <h2 class="accordion-header" id="heading1">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
-                                <p>Q. コンテンツは最後まで無料で学習可能なのでしょうか？</p>
+                                <p>Q. 緊急の水道トラブルも対応できますか？</p>
                             </button>
                         </h2>
                         <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="heading1"
                             data-bs-parent="#accordionFAQ">
                             <div class="accordion-body">
-                                A. 登録するだけで最後まで無料で学習できます。
+                                A. ぜひご相談ください。
                             </div>
                         </div>
                     </div>
@@ -216,13 +236,13 @@
                         <h2 class="accordion-header" id="heading2">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
-                                <p>Q. 登録にはお金がかかりますか？</p>
+                                <p>Q. 最低利用期間はありますか？</p>
                             </button>
                         </h2>
                         <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2"
                             data-bs-parent="#accordionFAQ">
                             <div class="accordion-body">
-                                A. 登録は無料です。入会金や年会費などもかかりません。
+                                A. 最低６カ月の契約が必要です。
                             </div>
                         </div>
                     </div>
@@ -236,11 +256,14 @@
                         <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3"
                             data-bs-parent="#accordionFAQ">
                             <div class="accordion-body">
-                                A. 「Bootstrap超入門」コンテンツのサンプルページです。学ぶことでこのページが最終的に作れるようになります。
+                                A. 「Bootstrap超入門」のサンプルページです。
                             </div>
                         </div>
                     </div>
                 </div>
+                <div class="wazatocontainer">
+                    <div class="wazatooverflow ">お問い合わせはいつでもどうぞ</div>
+               </div>
             </div>
         </div>
     </div>
@@ -249,47 +272,47 @@
 <section class="bg-light p-5" id="team">
     <div class="container overflow-hidden">
         <div class="row text-center">
-            <h3 class="mb-4">講師／メンター</h3>
+            <h3 class="mb-4">お客様の声</h3>
         </div>
         <div class="row text-center">
             <div class="col-md-6 col-lg-3 mb-3">
                 <div class="bg-white border shadow p-4 h-100">
                     <img class="rounded-circle mb-3"
-                        src="https://doodleipsum.com/700x700/avatar-4?bg=87CEEB&i=3c872b28d4577889c194cbc98b672696"
+                        src="https://doodleipsum.com/700/avatar-2?i=c0515d27f50e828469ba5468e4c8c739"
                         width="80">
-                    <p class="text-secondary fw-bold">佐藤 太郎</p>
-                    <p class="border-bottom">チーフエンジニア</p>
-                    <p>本ページはサンプルであり、サポートメンバーは架空の人物です。</p>
+                    <p class="text-secondary fw-bold">Ｓ様</p>
+                    <p class="border-bottom">消火器導入</p>
+                    <p>台所に消火器を導入しました。実際に使う時がないといいですが導入して安心できました。</p>
                 </div>
             </div>
             <div class="col-md-6 col-lg-3 mb-3">
                 <div class="bg-white border shadow p-4 h-100">
                     <img class="rounded-circle mb-3"
-                        src="https://doodleipsum.com/700x700/avatar-4?bg=87CEEB&i=8de3b58cab71e0ce7d1e1081418edb62"
+                        src="https://doodleipsum.com/700/avatar-2?i=5dc319fb779324f5ff3a56860ead7d1b"
                         width="80">
-                    <p class="text-secondary fw-bold">鈴木 太郎</p>
-                    <p class="border-bottom">エンジニア</p>
-                    <p>本ページはサンプルであり、サポートメンバーは架空の人物です。</p>
+                    <p class="text-secondary fw-bold">Ｋ様</p>
+                    <p class="border-bottom">台所リフォーム</p>
+                    <p>念願のＩＨキッチンになりました。火を使わないので安心して料理ができるようになりました。</p>
                 </div>
             </div>
             <div class="col-md-6 col-lg-3 mb-3">
                 <div class="bg-white border shadow p-4 h-100">
                     <img class="rounded-circle mb-3"
-                        src="https://doodleipsum.com/700x700/avatar-4?bg=87CEEB&i=58e15545cbaaccdde1e619aa57b6f85f"
+                        src="https://doodleipsum.com/700/avatar-2?i=09d1ff61311e1f04032402ba8caead83"
                         width="80">
-                    <p class="text-secondary fw-bold">高橋 花子</p>
-                    <p class="border-bottom">デザイナー</p>
-                    <p>本ページはサンプルであり、サポートメンバーは架空の人物です。</p>
+                    <p class="text-secondary fw-bold">Ｈ様</p>
+                    <p class="border-bottom">火災報知器点検</p>
+                    <p>毎度、火災報知器の点検をお願いしています。いつもテキパキ対応してくれるので満足しています。</p>
                 </div>
             </div>
             <div class="col-md-6 col-lg-3 mb-3">
                 <div class="bg-white border shadow p-4 h-100">
                     <img class="rounded-circle mb-3"
-                        src="https://doodleipsum.com/700x700/avatar-4?bg=87CEEB&i=be176fd7d38de78c85dbfba873eb723a"
+                        src="https://doodleipsum.com/700/avatar-2?i=e55bfe6738b49702e4605a37ae107423"
                         width="80">
-                    <p class="text-secondary fw-bold">田中 太郎</p>
-                    <p class="border-bottom">アシスタント</p>
-                    <p>本ページはサンプルであり、サポートメンバーは架空の人物です。</p>
+                    <p class="text-secondary fw-bold">Ｂ様</p>
+                    <p class="border-bottom">お風呂のリフォーム</p>
+                    <p>バリアフリーのお風呂に変身して段差がなくなり、また手すりがつきました。足が不自由なので重宝します。</p>
                 </div>
             </div>
         </div>
@@ -299,7 +322,7 @@
 <footer class="py-3 bg-info">
     <div class="container">
         <div class="row">
-            <div class="col"><a href="https://monomonotech.jp/" class="text-decoration-none text-white">&copy; ものものテック</a></div>
+            <div class="col"><a href="#" class="text-decoration-none text-white">&copy; 水道・リフォーム会社</a></div>
             <div class="col text-end"><a href="#" class="text-decoration-none text-white"><i class="bi bi-chevron-up"></i> Back to top</a></div>
         </div>
     </div>
